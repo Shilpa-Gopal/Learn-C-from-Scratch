@@ -35,7 +35,7 @@
 - using namespace std;: This line allows you to use cout and cin without specifying std::.
 - int main() { ... }: The main function is the entry point of the program.
 - cout << "Hello, World!" << endl;: This line displays the message.
-- return 0;: This line indicates a successful program execution.
+- return 0;: This line indicates a successful program execution. It signals to the operating system that everything went smoothly. By default, a C++ program will always return 0 if there is no return at the end of main.
 
 ### Running the Program
 Compile the program using a C++ compiler (e.g., g++):
