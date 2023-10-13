@@ -31,13 +31,19 @@
       return 0;
   }
 ### Explanation of code components:
+- #: The start of a preprocessor command.
+- #include: specific preprocessor command, include the functionality in the program without having to literally cut and paste it into the source code every time.
 - #include <iostream>: This line includes the input/output library.
-- using namespace std;: This line allows you to use cout and cin without specifying std::.
+- using namespace std;:  allows you to use all the names defined in the std namespace without explicitly specifying(prefix) the namespace. It contains many standard library functions and objects.  For example, you can write cout instead of std::cout, cin instead of std::cin, and so on.
 - int main() { ... }: The main function is the entry point of the program.
-- cout << "Hello, World!" << endl;: This line displays the message.
+- cout: cout is short for “character output”
+- <<: behave like functions, This capability is called operator overloading.
+- {}: block of code defined within {} token represents start and end.
+- ;(semicolons): Statements in C++ must be terminated with a semicolon.
 - return 0;: This line indicates a successful program execution. It signals to the operating system that everything went smoothly. By default, a C++ program will always return 0 if there is no return at the end of main.
 
 ### Running the Program
+- Compiler: It is the translator that acts as an intermediary between the programmer and the CPU on the computer.
 Compile the program using a C++ compiler (e.g., g++):
 
 ```cpp
