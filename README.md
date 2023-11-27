@@ -1,6 +1,6 @@
 # Learn Cpp from Scratch
 
-> This repository tracks my progress, lessons, notes, and code examples for the "Learn C++ from Scratch" course on Educative.io.
+> This repository tracks my progress, lessons, notes, and interesting projects for the "Learn C++ from Scratch" and little reference from the course on Educative.io.
 
 ---
 
@@ -37,45 +37,37 @@ This repository serves as a record of my progress and work while studying the "L
 
 ### 1. Introduction
 
-- **Lessons:** 5
-
 ### 2. Variables & User Input
-
-- **Lessons:** 6
 
 ### 3. Simple Maths
 
-- **Lessons:** 5
-
 ### 4. Conditional Statements
-
-- **Lessons:** 7
 
 ### 5. Loops
 
-- **Lessons:** 8
-
 ### 6. Functions and Recursion
-
-- **Lessons:** 13
 
 ### 7. Pointers & Arrays
 
-- **Lessons:** 12
-
 ### 8. Classes and Inheritance
-
-- **Lessons:** 10
 
 ### 9. Templates
 
-- **Lessons:** 8
+## Projects
 
-### Assessments
+### 1. ColumnSort Algorithm
 
-- **C++ Exam 1**
-- **C++ Exam 2**
-- **C++ Exam 3**
+### 2.
+
+###
+
+###
+
+###
+
+###
+
+---
 
 Feel free to explore the folders and files corresponding to each course section to access the specific course content.
 
@@ -88,7 +80,7 @@ The repository is structured as follows:
 - `lessons/`: Contains code and notes related to individual course lessons.
 - `projects/`: Houses larger projects or assignments.
 - `resources/`: Any additional resources or notes that complement the course material.
-- `README.md`: This file providing an overview of the repository.
+- `README.md`: This file provides an overview of the repository.
 
 Feel free to explore the folders to find specific course content.
 
