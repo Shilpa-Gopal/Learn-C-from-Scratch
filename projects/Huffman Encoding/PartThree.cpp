@@ -2,26 +2,27 @@
 // File Name: PartThree.cpp
 // Purpose :
 // Part(A): Encode the characters in a given text file, clear.txt, and generate a
-// corresponding output file, coded.txt, containing the a sequence of bits representing Huffman codes using codetable.txt
+// corresponding output file, coded.txt, containing the sequence of bits representing Huffman codes using codetable.txt
 // Part(B): Decode the sequence of bits representing Huffman codes in a given text file, coded.txt, and generate a
 // corresponding output file, decoded.txt using codetable.txt
 // Author(s): Shilpa Gopal
 // Creation Date: 2023-11-23
 **/
 
-
 #include "utility.h"
-#include <unordered_map>
 
-
-
-/**
- * @brief Encodes a file using the provided code table and writes the result to output file.
+/*
+ * It takes a file and encodes it using a special set of Huffman codes.
+ * translating each character in the file into a secret code according to a code book (the codeTable).
+ * It reads the file you give it (inputFileName), goes through it character by character, and replaces each
+ * character with its code. These codes are then written into another file (outputFileName) - encoded file.
  *
- * @param inputFileName The name of the input file to be encoded.
- * @param outputFileName The name of the output file to write the encoded result.
- * @param codeTable A Map containing char and corresponing Huffman codes.
+ * Parameters:
+ * - inputFileName: original file to encode
+ * - outputFileName: save encoded file
+ * - codeTable: character-to-code mappings.
  */
+
 
 void encode(const string& inputFileName, const string& outputFileName, const unordered_map<string, string>& codeTable) {
     ifstream inputFile(inputFileName, ios::in);
@@ -36,7 +37,7 @@ void encode(const string& inputFileName, const string& outputFileName, const uno
     unsigned char ch;
     string seperator = "X";
     while (inputFile.get(reinterpret_cast<char&>(ch))) {
-        
+
         // Encoding newline character
         if (ch == '\n') {
             auto it = codeTable.find("LF");
@@ -72,23 +73,26 @@ void encode(const string& inputFileName, const string& outputFileName, const uno
 }
 
 
-/**
- * @brief Decodes a file that has been encoded using a codeTable and writes the result to output file.
+/*
+ * the reverse of the encode function. It takes the file
+ * filled with codes (inputFileName), reads these codes, and then uses the codeTable to figure out what each code
+ * originally meant. Basically, it's turning the secret codes back into the original text. Once it does that, it
+ * writes this decoded text into a new file (outputFileName).
  *
- * @param inputFileName The name of the input file to be decoded.
- * @param outputFileName The name of the output file to write the decoded result.
- * @param codeTable A Map containing char and corresponing Huffman codes.
+ * Parameters:
+ * - inputFileName: file with all the codes.
+ * - outputFileName: decoded output file
+ * - codeTable:  character to code mapping, used for decoding
  */
-
 void decode(const string& inputFileName, const string& outputFileName, const unordered_map<string, string>& codeTable) {
-    
+
     ifstream inputFile(inputFileName, ios::in);
     ofstream outputFile(outputFileName, ios::out);
-       
+
 
     // Check if files are successfully opened
     if (!inputFile.is_open() || !outputFile.is_open()) {
-        cerr << "Error opening files!" << endl;
+        cerr << "Oops! There's an error opening your file! Try again!" << endl;
         return;
     }
 
@@ -148,9 +152,9 @@ int main() {
 
     // Assuming you have a codetable.txt in the format: character code
     unordered_map<string, string> codeTable;
-    
+
     // Populate codeTable from codetable.txt
-    ifstream codeTableFile("C:/Users/shlpg/source/repos/Pro5_3/codetable.txt");
+    ifstream codeTableFile("codetable.txt");
 
     string line;
 
@@ -164,15 +168,14 @@ int main() {
         ch = line.substr(0, pos);
         codeTable[ch] = line.substr(pos + 1);
 
-      
+
     }
     codeTableFile.close();
 
 
-    encode("C:/Users/shlpg/source/repos/Pro5_3/clear.txt", "C:/Users/shlpg/source/repos/Pro5_3/coded.txt", codeTable);
-  
-    decode("C:/Users/shlpg/source/repos/Pro5_3/coded.txt", "C:/Users/shlpg/source/repos/Pro5_3/decoded.txt", codeTable);
+    encode("clear.txt", "coded.txt", codeTable);
 
+    decode("coded.txt", "decoded.txt", codeTable);
 
     return 0;
 }
