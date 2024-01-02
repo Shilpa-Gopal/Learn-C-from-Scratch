@@ -1,14 +1,12 @@
 # Learn Cpp from Scratch
 
-> This repository tracks my progress, lessons, notes, and interesting projects for the "Learn C++ from Scratch" and little reference from the course on Educative.io.
+> This repository tracks my progress in interesting projects for the "Learn C++ from Scratch".
 
 ---
 
 ## Table of Contents
 
 - [Description](#description)
-- [Course Information](#course-information)
-- [Course Sections](#course-sections)
 - [Folder Structure](#folder-structure)
 - [Prerequisites](#prerequisites)
 - [Getting Started](#getting-started)
@@ -19,39 +17,9 @@
 
 ## Description
 
-This repository serves as a record of my progress and work while studying the "Learn C++ from Scratch" course on Educative.io. Here, you can find code examples, exercises, and projects related to the course, as well as any additional notes or resources that I've found helpful during the learning process.
+This repository serves as a record of my progress and work while studying the "Learn C++ from Scratch". Here, you can find code examples, exercises, and projects related to c++, as well as any additional notes or resources that I've found helpful during the learning process.
 
 ---
-
-## Course Information
-
-- **Course Title:** Learn C++ from Scratch
-- **Platform:** [Educative.io](course-link-if-available)
-- **Instructor:** [Instructor Name, if available]
-- **Course Duration:** 10hours straight
-- **Completion Date:** 
-
----
-
-## Course Sections
-
-### 1. Introduction
-
-### 2. Variables & User Input
-
-### 3. Simple Maths
-
-### 4. Conditional Statements
-
-### 5. Loops
-
-### 6. Functions and Recursion
-
-### 7. Pointers & Arrays
-
-### 8. Classes and Inheritance
-
-### 9. Templates
 
 ## Projects
 
@@ -76,8 +44,7 @@ Feel free to explore the folders and files corresponding to each course section 
 ## Folder Structure
 
 The repository is structured as follows:
-
-- `lessons/`: Contains code and notes related to individual course lessons.
+- `notes/`
 - `projects/`: Houses larger projects or assignments.
 - `resources/`: Any additional resources or notes that complement the course material.
 - `README.md`: This file provides an overview of the repository.
